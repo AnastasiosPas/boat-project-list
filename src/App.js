@@ -16,10 +16,12 @@ class App extends React.Component {
     super(); 
     
 this.state = {
-  
+
 }
 
   }
+
+  
     render () {
   return (
     <div className="App">
@@ -31,19 +33,20 @@ this.state = {
            <Register /> 
            <Contact /> 
           </span>
-    
-         
         </div>
-        <div id="appTitle">
-            <h1>Boating/Sailing Project List</h1>
-            <h3>Create your own Repair, Service, Maintainance, 
-               or Shopping lists which you can follow, edit and tick-done!
-            </h3> 
+        <div className="body">
+          <div id="appTitle">
+              <h1>Boating/Sailing Project List</h1>
+              <h3>Create your own Repair, Service, Maintainance, 
+                or Shopping lists which you can follow, edit and tick-done!
+              </h3> 
+          </div>
+          <br/>
+          <form method='GET' className='Items'>
+            <Items />
+          </form>
         </div>
-        <br/>
-        <div className='Items'>
-          <Items />
-        </div>
+        
 
         <h3>Disclaimer</h3>
     </div>

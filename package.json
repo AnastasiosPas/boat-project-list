@@ -1,6 +1,6 @@
 {
   "name": "boat-project-list",
-  "homepage": "https://anastasiospas.github.io/boat-project-list/",
+  "homepage": "https://github.com/AnastasiosPas/boat-project-list#readme",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-      "predeploy": "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -51,6 +51,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AnastasiosPas/boat-project-list/issues"
-  },
-  "homepage": "https://github.com/AnastasiosPas/boat-project-list#readme"
+  }
 }

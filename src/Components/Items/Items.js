@@ -2,7 +2,7 @@ import React from "react";
 import { boatWorks } from "./boatWorks";
 import {engineItems} from './engineItems';
 import './Items.css';
-import "animate.css";
+// import "animate.css";
 
 //import CreateItem from '../CreateItem/CreateItem';
 //import AddEngineItem from '../AddEngineItem/AddEngineItem';

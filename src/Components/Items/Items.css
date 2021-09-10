@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 500px);
+  grid-template-columns: repeat(auto-fill, 550px);
   justify-content: center;
   row-gap: 4px;
   column-gap: 15px;
@@ -19,6 +19,7 @@
   border: 1px solid rgba(187, 187, 187, 0.137);
   transition: all 0.3s linear;
   margin-bottom: 3px;
+  color: rgb(255, 255, 255);
 }
 
 h3 {
@@ -47,7 +48,8 @@ h3 {
   min-width: 200px;
   border-radius: 7px;
   background-color: rgb(100, 100, 245);
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  margin-top: 10px;
   cursor: pointer;
   transition: all 0.3s linear;
 }

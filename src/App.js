@@ -6,28 +6,37 @@ import MyLists from './Components/MyLists/MyLists';
 import LogIn from './Components/LogIn/LogIn';
 import Register from './Components/Register/Register';
 import Contact from './Components/Contact/Contact';
+import Scroll from './Components/Scroll/Scroll';
+
 
 
 
 
 
 class App extends React.Component {
-  constructor() {
-    super(); 
-    
-this.state = {
-
-}
-
+    constructor() {
+      super(); 
+      
+  this.state = { itemsList: [],
+                createList: false
   }
+    }
+
+  onClickCreate = () => {
+    this.setState ({
+      createList: true
+    });
+    console.log("create list clicked");
+    
+  }
+
 
   
     render () {
   return (
     <div className="App">
-        <div>
+        <div className="topbar">
           <span className="navbar">
-           <CreateList />
            <MyLists />
            <LogIn />
            <Register /> 
@@ -36,19 +45,22 @@ this.state = {
         </div>
         <div className="body">
           <div id="appTitle">
-              <h1>Boating/Sailing Project List</h1>
-              <h3>Create your own Repair, Service, Maintainance, 
+              <h1>Boating Project List</h1>
+              {/* <h3>Create your own Repair, Service, Maintainance, 
                 or Shopping lists which you can follow, edit and tick-done!
-              </h3> 
+              </h3>  */}
+              <h2>Register / log in with your email, choose jobs from the lists, add also your own jobs, and then click on, "create your list"</h2>
           </div>
-          <br/>
-          <form method='GET' className='Items'>
-            <Items />
-          </form>
+          <div  className='Items'>
+            <Scroll>
+               <Items />
+            </Scroll>
+            <CreateList clickcreate={this.onClickCreate} />
+          </div>
         </div>
         
 
-        <h3>Disclaimer</h3>
+        <h3 className='footer' >Disclaimer</h3>
     </div>
   );
  }

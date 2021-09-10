@@ -1,47 +1,81 @@
 import React from "react";
 import { boatWorks } from "./boatWorks";
 import {engineItems} from './engineItems';
+import List from '../List/List';
 import './Items.css';
-// import "animate.css";
 
-//import CreateItem from '../CreateItem/CreateItem';
-//import AddEngineItem from '../AddEngineItem/AddEngineItem';
 
+
+
+class Items extends React.Component {
+  
+  constructor () {
+    super ();
+
+    this.state = {
+      input: "",
+      addedItem: []
+    }
+  }
  
+       onInputChange = (event) => {
+      this.setState({input: event.target.value});
+    }
+  
 
+    onButtonSubmit1 = () => {
+      this.setState({ addedItem:  this.state.input,
+                      });
+            engineItems.push(this.state.input);
+            this.setState({input: ''});
+                    }     
+      
+    onButtonSubmit2 = () => {
+      this.setState({ addedItem:  this.state.input,     
+                      });
+            boatWorks.push(this.state.input);
+            this.setState({input: ''});
+                    }     
 
-function Items() {
-    const renderEngineItems = engineItems.map(i => <label className="listings" htmlFor={i} key = {i}><input type="checkbox" name={i}/>{i} <div className="action">Started</div> <input type="radio" name='progress'/>   <div className="action">Done</div><input type="radio" name='progress' /></label>); 
-    const renderBoatWorks =     boatWorks.map(j => <label className="listings" htmlFor={j} key = {j}><input type="checkbox" name={j}/>{j} <div className="action">Started</div> <input type="radio" name='progress'/>   <div className="action">Done</div><input type="radio" name='progress' /></label>); 
+    render () {
 
+  return (
 
+  <div className='container' >
 
-    return (
-      <div>
-          <div className='container' >
-              <div className='engineItems '>
-              <h3>Engine items</h3>
-                  {renderEngineItems}
-                  {/* <CreateItem /> */}
-              </div>
-
-              <div className='boatWorks'>
-              <h3>Boat works and checks</h3>
-                {renderBoatWorks}
-                {/* <CreateItem /> */}
-              </div>
-          </div>
- 
-          <br/>
-        <input type='submit' className='createbutton' value='Create your list!' />
+      <div className='engineItems ' >
+        <h3>Engine items</h3>
+        <div> 
+          <List array={ engineItems }/>
+            
+            <input id='userinput' onChange={this.onInputChange} 
+                    type='text' 
+                    value={this.state.input} 
+                    placeholder='Add an item'/>
+            <button id='enter' onClick={this.onButtonSubmit1}>Add
+            </button>
+        </div>
       </div>
-      );
-    };
 
+      <div className='boatWorks'>
+        <h3>Boat works and checks</h3>
+        <div>
+          <List array= {boatWorks} />
+            <input id='userinput2' 
+                    onChange={this.onInputChange} 
+                    type='text' value={this.state.input} 
+                    placeholder='Add an item'/>
+            <button id='enter2' onClick={this.onButtonSubmit2}>Add
+            </button>
+        </div>
+      </div>
 
+  </div>
 
-
-
-
+      )
+  }
+    
+}
+    
 
 export default Items;

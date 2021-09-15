@@ -45,7 +45,7 @@
     "nodemon": "^2.0.12"
   },
   "description": "This is a single page ReactJS app/website where users can register/log in and create custom lists of their boating project jobs. Ideal for repairs, maintenance, checklists before a trip and shopping. It is still under construction but most of its Front-end is finished.",
-  "main": "index.html",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AnastasiosPas/boat-project-list.git"

@@ -1,10 +1,10 @@
 import React from "react";
 
 
-const CreateList = ({clickcreate}) => {
+const CreateList = ({onCreate}) => {
     return (
         <button type='submit' 
-                onClick={clickcreate}
+                onClick={onCreate}
                 className='createbutton' 
                 value='Create your list!'>
                     Create your list!

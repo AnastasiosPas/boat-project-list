@@ -3,7 +3,13 @@ import React from "react";
 
 const MyLists = () => {
     return (
-        <h3>My Lists</h3>
+        <div>
+        <input 
+               className="btn login" 
+               type="submit" 
+               value="My Lists" 
+        />
+    </div>
     )
 }
 

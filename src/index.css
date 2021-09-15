@@ -15,5 +15,5 @@ code {
 
 @font-face {
   font-family: 'Fisherman';
-  src: local('Fisherman'), url(./fonts/Fisherman-Regular.otf) format('truetype');
+  src: local('Fisherman'), url(./fonts/Fisherman-Regular.ttf) format('truetype');
 }

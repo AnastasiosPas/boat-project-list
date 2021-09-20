@@ -3,10 +3,8 @@ import './login.css';
 
 const LogIn = ({onRouteChange}) => {
 
-
     return (
             
-
     <div id="login" className="modal fade" role="dialog">
     <div className="modal-dialog center">
         <div className="modal-content">

@@ -6,8 +6,8 @@ const LogOut = ({onRouteChange}) => {
     return (
     <div>
         <p  onClick={() => onRouteChange('kok')}
-               className="btn login" 
-        >Log Out</p>
+               className="btn login">Log Out</p>
+
     </div>
 
     )

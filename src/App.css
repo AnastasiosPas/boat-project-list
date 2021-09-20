@@ -1,9 +1,8 @@
 .body {
   margin: 5px;
   text-align: center;
-
-  /* border: 5px solid black;
-  border-radius: 7px; */
+  border: 5px solid rgba(114, 9, 252, 0.6);
+  border-radius: 7px;
 }
 
 .center {
@@ -15,13 +14,10 @@
   top: 0px;
   display: flex;
   justify-content: space-evenly;
-  font-size: 1.1rem;
   align-self: center;
-  background-color: transparent;
-  cursor: pointer;
   color: rgb(161, 248, 248);
   position: sticky;
-  top: 0;
+  max-height: fit-content;
   z-index: 100;
 }
 
@@ -29,16 +25,15 @@
   font-family: Fisherman, JlrWaves, serif;
   color: gold;
   margin-bottom: 3px;
-  transition-duration: 3s;
 }
 
 .title {
   font-size: 5em;
-  text-shadow: 2px 2px #686666;
+  text-shadow: 12px 12px #686666;
   margin: -10px;
 }
 .subtitle {
-  text-shadow: 1px 1px #686666;
+  text-shadow: 4px 4px #686666;
   margin-top: 20px;
 }
 
@@ -55,10 +50,10 @@
   z-index: -99;
 }
 
-.navbar:hover {
+/* .navbar:hover {
   box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 5px,
     inset rgba(0, 0, 0, 0.15) 0px -10px 10px;
-}
+} */
 
 .Items {
   margin: 2px;

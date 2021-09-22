@@ -7,6 +7,7 @@ import LogIn from './Components/LogIn/LogIn';
 import LogOut from './Components/LogOut/LogOut';
 import Register from './Components/Register/Register';
 import Scroll from './Components/Scroll/Scroll';
+
 // import { boatWorks } from "./Components/Items/boatWorks";
 // import {engineItems} from './Components/Items/engineItems';
 
@@ -18,10 +19,22 @@ class App extends React.Component {
       
   this.state = { itemsList: [],
                 newArray: [],
-                
-                route: 'login'
+                route: 'login',
+                user: {
+                        id: '',
+                        name: '',
+                        email: '',
+                        mylist: '',
+                        joined: ''
+                     }
   }
     }
+
+// componentDidMount() {
+//   fetch('http://localhost:3005')
+//   .then(response => response.json())
+//   .then(console.log)
+// }
 
 onRouteChange = (route) => {
   this.setState ({ route: route
@@ -29,27 +42,22 @@ onRouteChange = (route) => {
 }
 
 
+loadUser = (data) => {
+  this.setState({user: { 
+    id: data.id,
+    name: data.name,
+    email: data.email,
+    myList: data.myList,
+    joined: data.joined
+
+  }})
+}
+
+
 onCreate = () => {
    const boxes = document.getElementsByClassName('checkboxItems');
  console.log(boxes)
-   //  function checkChecked(array, i) {
-  //   return array[i].checked;
-  // }
-  //  const filteredArray = boxes.filter(checkChecked);
-  //  this.setState ({ newArray: filteredArray
-  //  })
     }
-
-    
-
-  // checkedBoatworks = (array, i) => { 
-  //   let myArray = [];
-  //   if (document.getElementsByClassName(checkboxItems).checked === true) {
-  //     myArray.push(array[i]); 
-  //     }      
-  //     return console.log(myArray)
-  // }
-  
 
   
     render () {
@@ -61,25 +69,28 @@ onCreate = () => {
          <div className='navbar'>
           <MyLists style={{cursor: 'pointer'}}/> 
           <LogOut onRouteChange={this.onRouteChange}/> 
-          <button className="btn login username form-control" ><a href="mailto: captain@oneplaceboating.com"  style={{textDecoration: 'none', color:'gold'}}>E-mail Us</a>
+          <button className="btn login username form-control" >
+            <a href="mailto: captain@oneplaceboating.com"  
+               style={{textDecoration: 'none', color:'gold'}}>
+                 E-mail Us</a>
           </button>
-         </div> :
+         </div>  :
          ( this.state.route === 'register' ) ?  
-         <div  className='navbar' style={{display: 'grid', gridTemplateColumns: '9fr 1fr', alignItems:'center', marginLeft: '55px'}}>
-           <Register onRouteChange={this.onRouteChange}/> 
+         <div  className='navbar' style={{display: 'grid', gridTemplateColumns: '9fr 1fr', alignItems:'center', marginLeft: '80px'}}>
+           <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/> 
            <button className="btn login username form-control" ><a href="mailto: captain@oneplaceboating.com"  style={{textDecoration: 'none', color:'gold'}}>E-mail Us</a>
           </button>
          </div>
          :
-         <div className='navbar' style={{display: 'grid', gridTemplateColumns: '9fr 1fr', alignItems:'center', marginLeft: '55px'}}>
-          <LogIn onRouteChange={this.onRouteChange}/> 
-          <button style={{justifySelf: 'end'}} className="btn login username form-control" ><a href="mailto: captain@oneplaceboating.com"  style={{textDecoration: 'none', color:'gold'}}>E-mail Us</a>
-          </button>
-</div>
+         <div className='navbar' style={{display: 'grid', gridTemplateColumns: '9fr 1fr', alignItems:'center', marginLeft: '80px'}}>
+            <LogIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/> 
+            <button style={{justifySelf: 'end'}} className="btn login username form-control" ><a href="mailto: captain@oneplaceboating.com"  style={{textDecoration: 'none', color:'gold'}}>E-mail Us</a>
+            </button>
+         </div>
 
          } 
-
         </div>
+
         <div className="body">
           <div id="appTitle">
               <h1 className='title'>Boating Project List</h1>

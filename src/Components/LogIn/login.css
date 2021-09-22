@@ -37,9 +37,9 @@ h4 {
 .form-control:focus {
   border-color: #fff;
 }
-.username,
+.name,
 .password,
-.nickname {
+.email {
   border: none;
   border-radius: 0;
   box-shadow: none;

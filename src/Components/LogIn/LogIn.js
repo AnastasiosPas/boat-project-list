@@ -19,7 +19,7 @@ class LogIn extends React.Component  {
     }
 
     onSubmitLogIn = () => {
-        fetch('http://localhost:3001/login/', {
+        fetch('http://localhost:3000/login/', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

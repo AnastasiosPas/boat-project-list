@@ -5,7 +5,7 @@ const LogOut = ({onRouteChange}) => {
 
     return (
     <div>
-        <p  onClick={() => onRouteChange('home')}
+        <p  onClick={() => onRouteChange('login')}
                className="btn login">Log Out</p>
 
     </div>

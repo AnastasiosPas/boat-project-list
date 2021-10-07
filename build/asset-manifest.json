@@ -1,6 +1,24 @@
 {
-  "main.js": "static/js/main.69526fb7.js",
-  "main.js.map": "static/js/main.69526fb7.js.map",
-  "static/js/0.0d657ca3.chunk.js": "static/js/0.0d657ca3.chunk.js",
-  "static/js/0.0d657ca3.chunk.js.map": "static/js/0.0d657ca3.chunk.js.map"
+  "files": {
+    "main.css": "/AnastasiosPas/boat-project-list/static/css/main.d90877e4.chunk.css",
+    "main.js": "/AnastasiosPas/boat-project-list/static/js/main.00b6a623.chunk.js",
+    "main.js.map": "/AnastasiosPas/boat-project-list/static/js/main.00b6a623.chunk.js.map",
+    "runtime-main.js": "/AnastasiosPas/boat-project-list/static/js/runtime-main.d0c981b4.js",
+    "runtime-main.js.map": "/AnastasiosPas/boat-project-list/static/js/runtime-main.d0c981b4.js.map",
+    "static/js/2.20d39029.chunk.js": "/AnastasiosPas/boat-project-list/static/js/2.20d39029.chunk.js",
+    "static/js/2.20d39029.chunk.js.map": "/AnastasiosPas/boat-project-list/static/js/2.20d39029.chunk.js.map",
+    "static/js/3.796bc2e8.chunk.js": "/AnastasiosPas/boat-project-list/static/js/3.796bc2e8.chunk.js",
+    "static/js/3.796bc2e8.chunk.js.map": "/AnastasiosPas/boat-project-list/static/js/3.796bc2e8.chunk.js.map",
+    "index.html": "/AnastasiosPas/boat-project-list/index.html",
+    "static/css/main.d90877e4.chunk.css.map": "/AnastasiosPas/boat-project-list/static/css/main.d90877e4.chunk.css.map",
+    "static/js/2.20d39029.chunk.js.LICENSE.txt": "/AnastasiosPas/boat-project-list/static/js/2.20d39029.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/AnastasiosPas/boat-project-list/static/media/Fisherman-Regular.d9093426.ttf",
+    "static/media/App.css": "/AnastasiosPas/boat-project-list/static/media/title_background.8b3a3a0a.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0c981b4.js",
+    "static/js/2.20d39029.chunk.js",
+    "static/css/main.d90877e4.chunk.css",
+    "static/js/main.00b6a623.chunk.js"
+  ]
 }

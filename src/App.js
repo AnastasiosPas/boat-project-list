@@ -37,6 +37,7 @@ class App extends React.Component {
 // }
 
 onRouteChange = (route) => {
+  
   this.setState ({ route: route
   })
 }
@@ -47,7 +48,7 @@ loadUser = (data) => {
     id: data.id,
     name: data.name,
     email: data.email,
-    myList: data.myList,
+    mylist: data.mylist,
     joined: data.joined
 
   }})

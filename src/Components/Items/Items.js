@@ -1,43 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { boatWorks } from "./boatWorks";
 import {engineItems} from './engineItems';
-import List from '../List/List';
+import Item from '../Item/Item';
 import './Items.css';
 
 
 
 
-class Items extends React.Component {
-  
-  constructor () {
-    super ();
-
-    this.state = {
-      input: "",
-      addedItem: []
-    }
-  }
+const Items =  () => {
+  const [itemInput, setItemInput] = useState('')
  
-       onInputChange = (event) => {
-      this.setState({input: event.target.value});
+
+   const onInputChange = (event) => {
+        setItemInput(event.target.value);
     }
-  
 
-    onButtonSubmit1 = () => {
-      this.setState({ addedItem:  this.state.input,
-                      });
-            engineItems.push(this.state.input);
-            this.setState({input: ''});
-                    }     
-      
-    onButtonSubmit2 = () => {
-      this.setState({ addedItem:  this.state.input,     
-                      });
-            boatWorks.push(this.state.input);
-            this.setState({input: ''});
-                    }     
-
-    render () {
 
   return (
 
@@ -45,28 +22,34 @@ class Items extends React.Component {
 
       <div className='engineItems ' >
         <h3>Engine items</h3>
-        <div> 
-          <List array={ engineItems }/>
+        <div> {engineItems.map((item) => <Item item={item}/>)}
+        
             
-            <input id='userinput' onChange={this.onInputChange} 
+            <input id='userinput' onChange={onInputChange} 
                     type='text' 
-                    value={this.state.input} 
+                    value={itemInput} 
                     placeholder='Add an item'/>
-            <button id='enter' onClick={this.onButtonSubmit1}>Add
+            <button id='enter' onClick={() => {
+    setItemInput(itemInput);
+            engineItems.push(itemInput);
+            setItemInput('');
+                    }   }>Add
             </button>
         </div>
       </div>
 
       <div className='boatWorks'>
-        <h3>Boat works and checks</h3>
-        <div>
-          <List array= {boatWorks} />
-            <input id='userinput2' 
-                    onChange={this.onInputChange} 
-                    type='text' value={this.state.input} 
+      <h3>Boat works / checks</h3>
+        <div> {boatWorks.map((item) => <Item item={item}/>)}
+        <input id='userinput' onChange={onInputChange} 
+                    type='text' 
+                    value={itemInput} 
                     placeholder='Add an item'/>
-            <button id='enter2' onClick={this.onButtonSubmit2}>Add
-            </button>
+            <button id='enter' onClick={() => {
+                    setItemInput(itemInput);
+                    boatWorks.push(itemInput);
+            setItemInput('');} }
+            >Add</button>
         </div>
       </div>
 
@@ -75,7 +58,6 @@ class Items extends React.Component {
       )
   }
     
-}
     
 
 export default Items;
